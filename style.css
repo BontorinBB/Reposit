@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #222;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+    color: #ff6666;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6666;
+    border-radius: 15px;
+    border: 3px solid #cc3333;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.total {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: white;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.5s ease;
+}
+
+.total.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #cc3333;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Posições dos pontos do dado */
+.dot.pos1 { top: 15px; left: 15px; }
+.dot.pos2 { top: 15px; right: 15px; }
+.dot.pos3 { top: 40px; left: 40px; }
+.dot.pos4 { bottom: 15px; left: 15px; }
+.dot.pos5 { bottom: 15px; right: 15px; }
+.dot.pos6 { bottom: 40px; right: 40px; }
